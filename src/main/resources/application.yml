@@ -1,0 +1,16 @@
+server:
+  port: 4000
+  servlet:
+    context-path: /config-server
+spring:
+  application:
+    name: trycore-config-server
+  cloud:
+    config:
+      allow-override: true
+      override-none: true
+      override-system-properties: false
+      server:
+        git:
+          uri: https://github.com/lfmartinezpantoja/trycore-config-server.git
+          searchPaths: '{application}'
